@@ -1,6 +1,6 @@
 import fs from 'fs';
-import webpackGenerator from './generators/webpack.generator';
-
+import webpackGenerator from './webpack.generator';
+import layout from './templates/layout';
 
 const defaultConfig = {
     components: {
@@ -102,5 +102,8 @@ if (argv.length) {
 
     if (argv[0] === 'webpack') {
         processWebpack();
+    }
+    if (argv[0] === 'layout') {
+        layout(...argv.slice(1));
     }
 }

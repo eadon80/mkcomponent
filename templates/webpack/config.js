@@ -3,7 +3,8 @@ IMPORTS
 const config = {
     entry: ENTRY,
     output: OUTPUT,
-    module: MODULE
+    module: MODULE,
+    plugins: PLUGINS
 };
 
 module.exports = (env, argv) => {
